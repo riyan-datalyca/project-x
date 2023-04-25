@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:project_x/home/login/login_page.dart';
 
@@ -9,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,13 +22,8 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.white30,
           )),
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text("Project - X"),
-          ),
-          body: const LoginPage(),
-        ),
+      home: const SafeArea(
+        child: LoginPage(),
       ),
 
     );
