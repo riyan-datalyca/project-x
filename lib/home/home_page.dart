@@ -13,19 +13,19 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-          // useMaterial3: true,
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.purple,
-            accentColor: Colors.purpleAccent,
-            backgroundColor: Colors.white30,
-          )),
-      debugShowCheckedModeBanner: false,
-      home: const SafeArea(
-        child: LoginPage(),
-      ),
+    return Scaffold(
+      appBar: AppBar(
 
+      ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(child: Placeholder(child: Text("Public Image SlideShow"),)),
+          Expanded(child: Container(child: Text('My Image Grid View'),))
+        ],
+      ),
     );
   }
 }

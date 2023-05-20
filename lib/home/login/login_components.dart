@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CompanyLogo extends StatefulWidget {
   const CompanyLogo({Key? key}) : super(key: key);
@@ -55,7 +56,7 @@ class _LoginContainerState extends State<LoginContainer> {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Email Address'),
+                    decoration: const InputDecoration(hintText: 'Email Address'),
                     validator: (String? value) {
                       if (value == null || value.isEmpty) {
                         return 'Please Enter Email Address';
@@ -65,7 +66,7 @@ class _LoginContainerState extends State<LoginContainer> {
                     },
                   ),
                   TextFormField(
-                    decoration: InputDecoration(hintText: 'Password'),
+                    decoration: const InputDecoration(hintText: 'Password'),
                   )
                 ],
               ),
@@ -76,8 +77,9 @@ class _LoginContainerState extends State<LoginContainer> {
             child: ElevatedButton(
                 onPressed: () {
                   _formKey.currentState!.validate();
+                  context.go('/home');
                 },
-                child: Text("Login")),
+                child: const Text("Login")),
           )
         ],
       ),

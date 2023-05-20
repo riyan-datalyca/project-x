@@ -21,16 +21,16 @@ class _LoginPageState extends State<LoginPage> {
         if (constraints.maxWidth > 500) {
           return Scaffold(
             appBar: titleApp,
-            body: Row(
-              children: const [CompanyLogo(), SizedBox(width: 500,
+            body: const Row(
+              children: [CompanyLogo(), SizedBox(width: 500,
                 child: LoginContainer())],
             ),
           );
         } else {
           return Scaffold(
             appBar: titleApp,
-            body: Column(
-              children: const [CompanyLogo(), LoginContainer()],
+            body: const Column(
+              children: [CompanyLogo(), LoginContainer()],
             ),
           );
         }
