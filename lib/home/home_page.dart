@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:project_x/home/login/login_page.dart';
 
@@ -9,26 +10,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-          // useMaterial3: true,
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.purple,
-            accentColor: Colors.purpleAccent,
-            backgroundColor: Colors.white30,
-          )),
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text("Project - X"),
-          ),
-          body: const LoginPage(),
-        ),
-      ),
+    return Scaffold(
+      appBar: AppBar(
 
+      ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(child: Placeholder(child: Text("Public Image SlideShow"),)),
+          Expanded(child: Container(child: Text('My Image Grid View'),))
+        ],
+      ),
     );
   }
 }
